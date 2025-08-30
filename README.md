@@ -101,4 +101,4 @@ You can start editing the page by modifying `src/App.tsx`. The page auto-updates
 
 ## Name
 
-The [sphinx cat](https://en.wikipedia.org/wiki/Sphynx_cat) has no hair.
+The [sphynx cat](https://en.wikipedia.org/wiki/Sphynx_cat) has no hair.
