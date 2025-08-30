@@ -36,6 +36,8 @@ globalThis['renderPage'] = function () {
 
 ### BTS setup
 
+This function should be invoked top-level (e.g. `initBackground()`)
+
 ```javascript
 function initBackground () {
   'background only'
