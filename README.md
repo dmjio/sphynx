@@ -65,10 +65,13 @@ function stepBG (frame) {
 }
 ```
 
+## Lynx DevTool
+
 The communication can be observed in the [LynxExplorer](https://lynxjs.org/guide/debugging/lynx-devtool.html).
 
 <img width="461" height="422" alt="Screenshot 2025-08-30 at 10 06 08 AM" src="https://github.com/user-attachments/assets/f11f3e85-2ae5-4770-8947-50e44e02531f" />
 
+## Plugin
 
 The [ReactLynxPlugin](https://www.npmjs.com/package/@lynx-js/react-rsbuild-plugin) is used to facilitate [code splitting](https://lynxjs.org/react/code-splitting.html). This ensures code marked with `'background-only'` only executes on the background thread.
 
