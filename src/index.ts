@@ -1,5 +1,5 @@
 // dmj: This code serves as an example of interthread communication
-// Each interpreter runs in a rAF loop, sending
+// Each interpreter runs in a rAF loop, sending messages back and forth
 initBackground();
 
 // dmj: executed by MTS
