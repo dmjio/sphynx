@@ -19,7 +19,7 @@ Similarly, the main thread is able to communicate with the background thread via
 const context = lynx.getJSContext();
 ```
 
-Event listeners for the `"message"` event (shown below) are added to each thread. This allows each thread to relay messsages between each other via a call to `postMessage(data)`.
+Event listeners for the `"message"` event (shown below) are added to each thread. This allows each thread to relay messsages between each other via a call to `.postMessage(data)`.
 
 ### MTS setup
 
