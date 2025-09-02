@@ -1,3 +1,5 @@
+import "lynxwebsockets";
+
 // dmj: This code serves as an example of interthread communication
 // Each interpreter runs in a rAF loop, sending messages back and forth
 initBackground();
@@ -11,14 +13,18 @@ globalThis['renderPage'] = function () {
   lynx.requestAnimationFrame(stepMain);
 }
 
-// dmj: executed by BTS only ( can access lynx.getJSModule('GlobalEventEmitter') here )
+// dmj: Executed by BTS only ( can access lynx.getJSModule('GlobalEventEmitter') here )
 function initBackground () {
   'background only'
   const context = lynx.getCoreContext();
   context.addEventListener("message", (event) => {
     console.log('got event in core context', event);
   });
-  lynx.requestAnimationFrame(stepBG);
+  var ws = new WebSocket ('wss://echo.websocket.org');
+  ws.onmessage = function (msg) {
+    console.log('got message', msg);
+  }
+  stepBG(ws);
 }
 
 function stepMain (frame) {
@@ -27,10 +33,13 @@ function stepMain (frame) {
   lynx.requestAnimationFrame(stepMain);
 }
 
-function stepBG (frame) {
+function stepBG () {
   const context = lynx.getCoreContext();
   context.postMessage({ main : frame });
-  lynx.requestAnimationFrame(stepBG);
+  setTimeout (function() {
+      ws.send('hey!')
+      stepBg ();
+  }, 2000);
 }
 
 globalThis['processData'] = function () {};

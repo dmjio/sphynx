@@ -9,7 +9,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@lynx-js/react": "^0.112.4"
+    "@lynx-js/react": "^0.112.4",
+    "lynxwebsockets": "nanofuxion/lynxwebsockets",
+    "tamer4lynx": "nanofuxion/tamer4lynx"
   },
   "devDependencies": {
     "@lynx-js/preact-devtools": "^5.0.1-6664329",
