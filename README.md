@@ -3,7 +3,7 @@ sphynx 🐈
 
 ## About
 
-This is a barebones [LynxJS](https://github.com/lynx-family/lynx) project meant to demonstrate cross-thread communication between background ([BTS](https://lynxjs.org/guide/scripting-runtime/index.html#background-thread)) and main threads ([MTS](https://lynxjs.org/react/main-thread-script.html)). This will help other compile-to-JS languages target [LynxJS](https://lynxjs.org). This also enables the consumption of [Native Modules](https://lynxjs.org/guide/use-native-modules#platform=ios) and for interacting with native device APIs.
+This is a barebones [LynxJS](https://github.com/lynx-family/lynx) project meant to demonstrate cross-thread communication between background ([BTS](https://lynxjs.org/guide/scripting-runtime/index.html#background-thread)) and main threads ([MTS](https://lynxjs.org/react/main-thread-script.html)). This will help other compile-to-JS languages target [LynxJS](https://lynxjs.org). This also enables the consumption of [Native Modules](https://lynxjs.org/guide/use-native-modules#platform=ios) for interacting with device APIs.
 
 ## Walkthrough
 
